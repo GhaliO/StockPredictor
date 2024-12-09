@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 # Load the dataset
 @st.cache_data
 def load_data():
-    file_path = "C:/Users/ghali/PycharmProjects/StockPredictor/MacroTrends_Data_Download_AAPL.xlsx"
+    file_path = "MacroTrends_Data_Download_AAPL.xlsx"
     data = pd.read_excel(file_path)
     data.columns = data.columns.str.strip().str.lower()  # Standardize column names to lowercase
     data['date'] = pd.to_datetime(data['date'])  # Ensure 'date' is in datetime format
